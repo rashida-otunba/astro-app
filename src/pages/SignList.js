@@ -16,8 +16,14 @@ const SignList = () => {
         <>
         
 
-          <Grid container spacing={5}>
-            {zodiac.sign}
+          <Grid container spacing={0}
+          
+          >
+            <Typography variant="h2" component="h2">
+               {zodiac.sign}
+               
+              </Typography>
+
           </Grid>
         </>
       ))}
