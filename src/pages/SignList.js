@@ -1,4 +1,4 @@
-import { Container, Grid, Typography, Card } from "@mui/material";
+import { Container, Grid, Typography,  } from "@mui/material";
 import zodiacs from "../data.json";
 import "./SignList.css";
 import SignCard from "../components/SignCard";
@@ -6,27 +6,47 @@ import SignCard from "../components/SignCard";
 const SignList = () => {
   return (
     <div>
-      <Typography variant="h2" component="h2">
+    
+      <Typography variant="h2" component="h2"
+      
+        sx={{
+            display: "flex",
+            justifyContent: "center",
+            color:"white",
+            marginY: 5
+          }}
+      
+      className="header-sign"
+      >
         Zodiac Signs
       </Typography>
-      <Container sx={{ marginY: 10, marginX: 23 }}>
-        {zodiacs.map((zodiac) => (
+      <Container className="sign-container" 
+      sx={{
+    
+           
+           }}>
+        {/* {zodiacs.map((zodiac) => ( */}
           <>
-            <Typography variant="h2" component="h2">
+            {/* <Typography variant="h2" component="h2">
               {zodiac.sign}
-            </Typography>
+            </Typography> */}
 
-            <Grid container spacing={0}>
-            {zodiacs.map((zodiac, index) => (
-              <SignCard zodiac={zodiac} key={index} />
-            ))}
-
+            <Grid container spacing={0}
+              className="sign-items"
+            >
+              {zodiacs.map((zodiac, index) => (
+                <SignCard 
+                zodiac={zodiac} key={index}
+              
+                 />
+              ))}
             </Grid>
           </>
-        ))}
+         )
+       
       </Container>
     </div>
-  );
-};
+     )
+}
 
 export default SignList;
