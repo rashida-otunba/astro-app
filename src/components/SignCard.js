@@ -6,67 +6,93 @@ import {
   createTheme,
   ThemeProvider,
 } from "@mui/material";
-import zodiacs from "../data.json";
+import "./SignCard.css";
 
 const theme = createTheme({
-  components: {
-    muiTypography: {
-      variants: [
-        {
-          props: {
-            variant: "body2",
-          },
-          style: {
-            fontSize: 11,
-          },
-        },
-        {
-          props: {
-            variant: "body3",
-          },
-          style: {
-            fontSize: 9,
-          },
-        },
-      ],
-    },
-  },
+  //   components: {
+  //     muiTypography: {
+  //       variants: [
+  //         {
+  //         //   props: {
+  //         //     variant: "body2",
+  //         //   },
+  //         //   style: {
+  //         //     fontSize: 11,
+  //         //     border: "red",
+  //         //   },
+  //         },
+  //       ],
+  //     },
+  //   },
 });
 
 const SignCard = ({ zodiac }) => {
   //variant is how it will look
   //component is what html element it will be <h2>
   return (
-    <Grid item xs={3}>
-      <ThemeProvider theme={theme}>
-        <Paper elevation={3}>
-          <img
-            src={zodiac.unicode_symbol}
-            alt="zodiac symbol"
-            className="img"
-          />
-          <Box paddingX={1}>
+    <Grid item xs={3} className="sign-grid">
+      <ThemeProvider
+        theme={theme}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Paper elevation={1}
+        className="sign-grid-element-ind"
+        >
+          <img src={zodiac.unicode_symbol} 
+          alt="zodiac symbol" className="img" />
+          <Box paddingX={0}>
             {/* adds padding to both x and y axis  */}
-            <Typography variant="subtitle1" component="h2">
-              {zodiac.name}
-            </Typography>
+
             <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-              }}
+            //   sx={{
+            //     display: "flex",
+            //     alignItems: "center",
+            //   }}
             >
-              <Typography variant="body2" component="p" marginLeft={0.5}>
-                {zodiac.keywords}
+              <Typography
+                variant="h5"
+                component="h3"
+                sx={{
+                  color: "blue",
+                  backgroundColor: "yellow",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {zodiac.sign}
+              </Typography>
+              <Typography
+                sx={{
+                    color: "blue",
+                    backgroundColor: "orange",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+              >traits</Typography>
+              <Typography
+              className="list-item"
+                variant="p"
+                component="p"
+                // marginLeft={0}
+                sx={{
+                  backgroundColor: "green",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <ul>
+                  {zodiac.keywords.map((key, index) => (
+                    <li>{key}</li>
+                  ))}
+                </ul>
               </Typography>
             </Box>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-              }}
-              marginTop={3}
-            ></Box>
           </Box>
         </Paper>
       </ThemeProvider>
