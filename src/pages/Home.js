@@ -1,6 +1,7 @@
 import { Container, Typography, Button } from "@mui/material";
 import "./Home.css";
 import NavBar from "../components/NavBar";
+import {Link} from 'react-router-dom'
 
 const Home = () => (
   <div>
@@ -19,7 +20,7 @@ const Home = () => (
         personalized astrology info based on your birthdate.
       </Typography>
 
-      <Button variant="outlined">find your sign.</Button>
+      <Button variant="outlined"><Link to ="form">find your sign.</Link></Button>
     </Container>
   </div>
 );
