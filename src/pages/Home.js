@@ -1,40 +1,34 @@
-import { Container, Typography, Button, Grid } from "@mui/material";
+import { Container, Button } from "@mui/material";
 import "./Home.css";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 
 const Home = () => (
-  <div>
-    <NavBar />
-    <div className="grid-content-wrapper">
-    <Container className="home-container"
-
-    >
-    
-      <Grid>
-
-        <Typography
-          variant="h1" //applied style to page; will look like this
-          component="h1" //final result tag; will show as h1 in browser
-          className="main-title"
-        >
-          astro.
-        </Typography>
-        </Grid>
-        <Grid>
-          <Typography variant="h5" component="h2">
-            personalized astrology info based on your birthdate.
-          </Typography>
-        </Grid>
-        <Grid>
-          <Button variant="outlined">
-            <Link to="form">find your sign.</Link>
-          </Button>
-        </Grid>
  
-    </Container>
-    </div>
-  </div>
+ <Container className="background-container">
+
+    <NavBar />
+
+    <main className="home-container">
+      <div className="main-container">
+      <div>
+        <h1 className="main-title">astro.</h1>
+      </div>
+      <div>
+        <h2>personalized astrology info based on your birthdate.</h2>
+      </div>
+      <div>
+        <Button 
+      
+        sx={{backgroundColor: "black", fontColor:"white"}}
+        >
+          <Link className="link-style" to="form">find your sign.</Link>
+        </Button>
+      </div>
+      </div>
+    </main>
+  
+  </Container>
 );
 
 export default Home;

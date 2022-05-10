@@ -5,3 +5,21 @@
 .nav-items{
        color: #E7DED8
 }
+
+.main-home-nav{font-family: 'Plus Jakarta Sans', sans-serif;
+color: tomato}
+
+.link-style{
+  color: white;
+  font-family: 'Archivo', sans-serif;
+  text-decoration:none;
+
+}
+
+
+.link-style:hover{
+  color: #4e4e62;
+ 
+
+}
+

@@ -1,5 +1,9 @@
+/* 
+font-family: 'Plus Jakarta Sans', sans-serif;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Space Grotesk', sans-serif; */
 
-.home-container{
+.background-container{
     min-height: 100vh;
     min-width: 100vw;
     background: url("../assets/main-background.jpg") no-repeat center center fixed; 
@@ -7,13 +11,55 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.home-container{
+  
+display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    grid-template-rows: 1fr;
+  
     
+  }
+  .main-container{
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    height: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top:0
+
   }
 
   .main-title{
       color: #E7DED8
   }
-  .grid-content-wrapper{
-      display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-  }
+h1{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+        /* font-family: 'Source Serif Pro', serif; */
+    font-size: 40pt;
+}
+h2{
+    justify-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+
+.link-style{
+    color: white;
+    font-family: 'Archivo', sans-serif;
+    text-decoration:none;
+
+}
+
+
+.link-style:hover{
+    color: black;
+   
+
+}
+
