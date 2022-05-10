@@ -20,14 +20,16 @@ export default function Form({ addForm }) {
     // prevents the submit button from refreshing the page
     //log the formInfo state to the browser
     event.preventDefault();
-    // console.log(formInfo.month);
+    console.log(formInfo);
 
     setFormInfo({ name: "", month: "", date: "" });
 
     const monthFinder = //finds the months from the zodiac list 
       zodiacs.map((zodiac) => {
         // console.log(zodiac.month);
-        return zodiac.month;
+      
+           return zodiac.month
+      
       });
       console.log(`this is the month finder ${monthFinder}`)
 
@@ -37,7 +39,13 @@ export default function Form({ addForm }) {
         return zodiac.sign;
       });
       console.log(`this is the signlist: ${signFinder}`)
-  
+  //for loop example 
+for (let i=0; i<=zodiacs.length-1; i++){
+  for (let j=0; j<=zodiacs[i].date.length-1;j++){//this is the second array 
+  console.log(zodiacs[i].date[j])//current object then the .date array ; [j can print the first date and the second date]
+  }console.log(`i am a loop!`+ zodiacs[i])
+}
+
   };
 
   return (
@@ -48,6 +56,7 @@ export default function Form({ addForm }) {
     // <CardContent>
     <>
       <NavBar />
+      <div>
       <form onSubmit={handleSubmit}>
         <label for="name">Name:</label>
         <input
@@ -62,42 +71,42 @@ export default function Form({ addForm }) {
           name="month"
           value={formInfo.month}
           onChange={handleChange}
-          type="text"
+          type="number"
         >
-          <option onChange={handleChange} value="January">
+          <option onChange={handleChange} value="100">
             January
           </option>
-          <option onChange={handleChange} value="February">
+          <option onChange={handleChange} value="200">
             February
           </option>
-          <option onChange={handleChange} value="March">
+          <option onChange={handleChange} value="300">
             March
           </option>
-          <option onChange={handleChange} value="April">
+          <option onChange={handleChange} value="400">
             April
           </option>
-          <option onChange={handleChange} value="May">
+          <option onChange={handleChange} value="500">
             May
           </option>
-          <option onChange={handleChange} value="June">
+          <option onChange={handleChange} value="600">
             June
           </option>
-          <option onChange={handleChange} value="July">
+          <option onChange={handleChange} value="700">
             July
           </option>
-          <option onChange={handleChange} value="August">
+          <option onChange={handleChange} value="800">
             August
           </option>
-          <option onChange={handleChange} value="September">
+          <option onChange={handleChange} value="900">
             September
           </option>
-          <option onChange={handleChange} value="October">
+          <option onChange={handleChange} value="1000">
             October
           </option>
-          <option onChange={handleChange} value="November">
+          <option onChange={handleChange} value="1100">
             November
           </option>
-          <option onChange={handleChange} value="December">
+          <option onChange={handleChange} value="1200">
             December
           </option>
         </select>
@@ -210,6 +219,7 @@ export default function Form({ addForm }) {
           // onClick={handleChange}
         />
       </form>
+      </div>
     </>
     // </CardContent>
     // </Card>
