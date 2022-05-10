@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Container, Card } from "@mui/material";
+import { Container, Card, CardContent} from "@mui/material";
+import NavBar from "../components/NavBar"
 import "./Form.css";
 
 export default function Form({ addForm }) {
@@ -23,8 +24,13 @@ export default function Form({ addForm }) {
   };
 
   return (
-    <Container className="form-container">
-      <Card>
+    // <Container className="form-container">
+      // <Card 
+      // sx={{ minWidth: 175, marginY:40 }}
+      // >
+      // <CardContent>
+      <>
+      <NavBar />
         <form onSubmit={handleSubmit}>
           <label for="name">Name:</label>
           <input
@@ -183,8 +189,11 @@ export default function Form({ addForm }) {
 
           <input type="submit" value="Submit" onClick={handleChange} />
         </form>
-      </Card>
-    </Container>
+        </>
+        // </CardContent>
+      // </Card>
+      
+    // </Container>
     //classname or unique key is needed for this
     //map over JSOn based on the state based on the input onthe form
     //use useHooks inside form.js

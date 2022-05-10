@@ -7,8 +7,13 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
   }
 
   .main-title{
       color: #E7DED8
+  }
+  .grid-content-wrapper{
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
   }

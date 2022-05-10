@@ -9,21 +9,21 @@ import {
 import "./SignCard.css";
 
 const theme = createTheme({
-  //   components: {
-  //     muiTypography: {
-  //       variants: [
-  //         {
-  //         //   props: {
-  //         //     variant: "body2",
-  //         //   },
-  //         //   style: {
-  //         //     fontSize: 11,
-  //         //     border: "red",
-  //         //   },
-  //         },
-  //       ],
-  //     },
-  //   },
+  components: {
+    muiTypography: {
+      variants: [
+        {
+          props: {
+            variant: "h3",
+          },
+          style: {
+            fontSize: 14,
+            border: "yellow",
+          },
+        },
+      ],
+    },
+  },
 });
 
 const SignCard = ({ zodiac }) => {
@@ -38,52 +38,59 @@ const SignCard = ({ zodiac }) => {
           justifyContent: "center",
         }}
       >
-        <Paper elevation={1}
-        className="sign-grid-element-ind"
+        <Paper
+          elevation={1}
+          className="sign-grid-element-ind"
+          sx={{ backgroundColor: "#E7DED8" }}
         >
-          <img src={zodiac.unicode_symbol} 
-          alt="zodiac symbol" className="img" />
+          {/* <img src={zodiac.unicode_symbol} 
+          alt="zodiac symbol" className="img" /> */}
           <Box paddingX={0}>
             {/* adds padding to both x and y axis  */}
 
             <Box
-            //   sx={{
-            //     display: "flex",
-            //     alignItems: "center",
-            //   }}
+              paddingX={0.5}
+              sx={{
+                flexWrap: "wrap",
+              }}
             >
               <Typography
-                variant="h5"
-                component="h3"
+                variant="h4"
+                component="h2"
                 sx={{
-                  color: "blue",
-                  backgroundColor: "yellow",
+                  color: "black",
+                  // backgroundColor: "yellow",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+
                 }}
               >
                 {zodiac.sign}
               </Typography>
               <Typography
                 sx={{
-                    color: "blue",
-                    backgroundColor: "orange",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-              >traits</Typography>
-              <Typography
-              className="list-item"
-                variant="p"
-                component="p"
-                // marginLeft={0}
-                sx={{
-                  backgroundColor: "green",
+                  color: "black",
+                  // backgroundColor: "orange",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                }}
+              >
+                traits
+              </Typography>
+              <Typography
+                className="list-item"
+                variant="h6"
+                component="p"
+      
+                // marginLeft={0}
+                sx={{
+                  // backgroundColor: "green",
+                  display: "flex",
+                  // alignItems: "center",
+                  justifyContent: "center",
+                 
                 }}
               >
                 <ul>
