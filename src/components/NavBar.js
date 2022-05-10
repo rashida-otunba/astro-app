@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import "./NavBar.css"
+import {Link } from 'react-router-dom'
 
 export default function NavBar() {
   return (
@@ -24,17 +25,17 @@ export default function NavBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className="nav-items" variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography className="nav-items " variant="h6" component="div" sx={{ flexGrow: 1 }}><Link to="/" className="link-style main-home-nav">
             astro. 
-          </Typography>
+         </Link> </Typography>
           <Button 
           className="nav-items" 
         //   color="inherit"
-          >star signs</Button>
+          ><Link to="/signlist" className="link-style">star signs</Link></Button>
           <Button 
         //   color="inherit"
           
-          >about us</Button>
+          ><Link to="/signlist" className="link-style">about us</Link></Button>
         </Toolbar>
       </AppBar>
     </Box>
