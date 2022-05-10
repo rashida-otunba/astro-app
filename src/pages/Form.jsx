@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Container, Card, CardContent} from "@mui/material";
 import NavBar from "../components/NavBar"
 import "./Form.css";
+import zodiacs from "../data.json";
+
 
 export default function Form({ addForm }) {
   const [formInfo, setFormInfo] = useState({
@@ -22,6 +24,13 @@ export default function Form({ addForm }) {
     console.log(formInfo);
     setFormInfo({ name: "", month: "", date: "" });
   };
+
+  const monthFind=()=>{
+    if (formInfo.month===zodiacs.month){
+      return alert("same month")
+
+    }
+  }
 
   return (
     // <Container className="form-container">
@@ -187,7 +196,9 @@ export default function Form({ addForm }) {
             </option>
           </select>
 
-          <input type="submit" value="Submit" onClick={handleChange} />
+          <input type="submit" value="Submit" 
+          // onClick={handleChange} 
+          />
         </form>
         </>
         // </CardContent>
