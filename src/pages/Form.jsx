@@ -24,14 +24,14 @@ export default function Form({ addForm }) {
 
     setFormInfo({ name: "", month: "", date: "" });
 
-    const monthFinder =
+    const monthFinder = //finds the months from the zodiac list 
       zodiacs.map((zodiac) => {
         // console.log(zodiac.month);
         return zodiac.month;
       });
       console.log(`this is the month finder ${monthFinder}`)
 
-      const signFinder=
+      const signFinder= //finds the sign from the list 
       zodiacs.map((zodiac) => {
         // console.log(zodiac.month);
         return zodiac.sign;
