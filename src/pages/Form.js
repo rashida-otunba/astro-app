@@ -1,4 +1,6 @@
 import React from "react";
+import { Container, Grid, Card  } from "@mui/material";
+
 import "./Form.css";
 
 class Form extends React.Component {
@@ -11,7 +13,11 @@ class Form extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    this.setState({ 
+      
+      value: event.target.value 
+    
+    });
   }
 
   handleSubmit(event) {
@@ -19,8 +25,13 @@ class Form extends React.Component {
     event.preventDefault();
   }
 
+  
+
   render() {
     return (
+      <Container className="form-container">
+        <Grid>
+          <Card>
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
@@ -33,7 +44,9 @@ class Form extends React.Component {
 
         <label>
           Birth Month:
-          <select value={this.state.value} onChange={this.handleChange}>
+          <select 
+          name="month"
+          value={this.state.month} onChange={this.handleChange}>
             <option value="January">January</option>
             <option value="February">February</option>
             <option value="March">March</option>
@@ -51,7 +64,9 @@ class Form extends React.Component {
 
         <label>
           Birth Date:
-          <select value={this.state.value} onChange={this.handleChange}>
+          <select 
+          name="date"
+          value={this.state.date} onChange={this.handleChange}>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3 </option>
@@ -88,6 +103,12 @@ class Form extends React.Component {
         </label>
         <input type="submit" value="Submit" />
       </form>
+      </Card>
+      </Grid>
+      </Container>
+      //classname or unique key is needed for this 
+      //map over JSOn based on the state based on the input onthe form 
+      //use useHooks inside form.js
     );
   }
 }
