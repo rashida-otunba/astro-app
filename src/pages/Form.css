@@ -3,5 +3,19 @@ label{
 }
 
 .form-container{
-    background-color: #3F3F41;
+    /* background-color: #3F3F41; */
+    display: grid;
+    grid-template: auto;
+    justify-content: center;
+    
+}
+.form-inner-container{
+    /* background-color: #970d1a #4e204d; */
+
+    display: grid;
+    height: 30vh;
+    align-content: center;
+    /* justify-content: center; */
+
+
 }
