@@ -1,5 +1,5 @@
 import { Container, Button } from "@mui/material";
-import "./Home.css";
+// import "..App.css";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 

@@ -3,19 +3,12 @@
 
 
 #3F3F41- GREY  */
-
-
-.sign-grid{
-    /* border: yellow solid 2px; */
-    padding:8px;
-   
-
-}
-
 .sign-grid-element-ind{
-    /* background-color: aqua; */
+    /* background-color: orangered */
 
+    
 }
+
 
 .list-item li{
 list-style: none;
