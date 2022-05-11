@@ -50,26 +50,39 @@ export default function FormSubmission({ addForm }) {
 //     //   return zodiac.sign
 //     // }
 //   });
-let submitValue = Number(state.month) + Number(state.date);
-    // console.log(submitValue);
+let submitValue = Number(state.month) + Number(state.date); //321 = 300+21
+
+    console.log(submitValue);
   const zodiacSign=zodiacs.filter(x => { //if this is true it will return one item 
     // console.dir(x)
     // console.log (+x.date[0].start)
     // console.log(+x.date[0].start)
     // console.log(date[0].end)
     // console.log(submitValue);
-   if( +x.date[0].start <= submitValue && +x.date[0].end >= submitValue){
-     return x
+
+    // if( +x.date[0].start <= submitValue && +x.date[0].end >= submitValue){}
+//create a function to convert string to numbers that can be incremented through the date range and once numbers appear then you can 
+let startDate= parseInt(+x.date[0].start) 
+console.log(startDate)
+let endDate= parseInt(+x.date[0].end) 
+
+
+
+   if(  startDate >= submitValue  || endDate >= submitValue   ){
+    console.log(x)
+    return x
    }
+  
   })[0]
 console.log(zodiacSign)
+console.log(zodiacSign.sign)
 
   return (
     <div>
       <div style={{ color: "#fff" }}>
-        <p>you were born in {state.month}</p>
-        <p>{state.date}</p>
-        <p>{state.name}</p>
+        <p>your sign is {zodiacSign.sign}</p>
+        <p>your element is {zodiacSign.element}</p>
+
      
       </div>
     </div>
