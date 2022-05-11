@@ -25,24 +25,14 @@ const SignList = () => {
       <Grid
         container={true}
         xs={12}
-        // marginY={6}
-        // marginX={6}
         padding={12}
         className="sign-container"
         sx={{ 
-          // borderColor: "blue",
          m:0.5, alignItems:"center", justifyContent:"center"}}
       >
-        {/* {zodiacs.map((zodiac) => ( */}
-        {/* <Typography variant="h2" component="h2">
-              {zodiac.sign}
-            </Typography> */}
-
-        {/* <Grid item={true} xs={3} sx={{backgroundColor: "orange",}} containerspacing={0} > */}
           {zodiacs.map((zodiac, index) => (
             <SignCard zodiac={zodiac} key={index} />
           ))}
-        {/* </Grid> */}
       </Grid>
     </div>
   );
