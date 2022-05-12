@@ -83,7 +83,7 @@ export default function Form({ addForm }) {
             <Grid container={true} sx={{ alignItems: "center" }}>
               {/* <div> */}
               <ul>
-                {/* <Grid item={true}>
+                <Grid item={true}>
                   <li>
                     <label for="name">Name:</label>
                     <input
@@ -93,7 +93,7 @@ export default function Form({ addForm }) {
                       onChange={handleChange}
                     />
                   </li>
-                </Grid> */}
+                </Grid>
 
                 {/* </div> */}
 
@@ -107,13 +107,13 @@ export default function Form({ addForm }) {
                       onChange={handleChange}
                       type="number"
                     >
-                      <option onChange={handleChange} value="100">
+                      <option onChange={handleChange} value="1300">
                         January
                       </option>
-                      <option onChange={handleChange} value="200">
+                      <option onChange={handleChange} value="1400">
                         February
                       </option>
-                      <option onChange={handleChange} value="300">
+                      <option onChange={handleChange} value="1500">
                         March
                       </option>
                       <option onChange={handleChange} value="400">
@@ -157,7 +157,7 @@ export default function Form({ addForm }) {
                       type="number"
                       onChange={handleChange}
                     >
-                      <option onChange={handleChange} value="1">
+                      <option onChange={handleChange} value="1" type="number">
                         1
                       </option>
                       <option onChange={handleChange} value="2" type="number">
