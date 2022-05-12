@@ -199,9 +199,7 @@
       "date": [
           {   "start": "1321",
             "end": "1429"
-          },
-          { "start": "200",
-            "end": "218" }
+          }
         ],
       "longitude_start": "300",
       "longitude_end": "330",

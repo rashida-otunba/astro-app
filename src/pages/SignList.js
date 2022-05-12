@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import zodiacs from "../data.json";
+import zodiacssigns from "../data-null.json";
 import "./SignList.css";
 import SignCard from "../components/SignCard";
 import NavBar from "../components/NavBar";
@@ -30,7 +30,7 @@ const SignList = () => {
         sx={{ 
          m:0.5, alignItems:"center", justifyContent:"center"}}
       >
-          {zodiacs.map((zodiac, index) => (
+          {zodiacssigns.map((zodiac, index) => (
             <SignCard zodiac={zodiac} key={index} />
           ))}
       </Grid>

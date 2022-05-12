@@ -16,7 +16,7 @@ export default function NavBar() {
      sx={{flexGrow: 1 }}>
       <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}} >
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -24,7 +24,7 @@ export default function NavBar() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography className="nav-items " variant="h6" component="div" sx={{ flexGrow: 1 }}><Link to="/" className="link-style main-home-nav">
             astro. 
          </Link> </Typography>
@@ -35,7 +35,7 @@ export default function NavBar() {
           <Button 
         //   color="inherit"
           
-          ><Link to="/signlist" className="link-style">about us</Link></Button>
+          ><Link to="/form" className="link-style"> Sign Generator</Link></Button>
         </Toolbar>
       </AppBar>
     </Box>

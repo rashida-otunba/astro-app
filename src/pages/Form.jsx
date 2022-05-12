@@ -107,12 +107,18 @@ export default function Form({ addForm }) {
                       onChange={handleChange}
                       type="number"
                     >
-                      <option onChange={handleChange} value="1300">
+                        <option onChange={handleChange} value="0">
+                        Select Month 
+                      </option>
+                       <option onChange={handleChange} value="1300">
                         January
                       </option>
+
                       <option onChange={handleChange} value="1400">
-                        February
+                      February
                       </option>
+                      
+                     
                       <option onChange={handleChange} value="1500">
                         March
                       </option>
