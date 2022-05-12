@@ -4,7 +4,7 @@
       "sign": "Aries",
       "month": ["March", "April"],
       "date": [
-          {   "start": "321",
+          {   "start": "401",
             "end": "419"
           }
         ],
@@ -218,7 +218,7 @@
       "sign": "Pisces",
       "month": ["February", "March"],
       "date": [
-          {   "start": "1501",
+          {   "start": "1430",
             "end": "1519"
           },
           { "start": "300",
@@ -233,6 +233,26 @@
       "ruling_body_classic": "Jupiter",
       "ruling_body_modern": "Neptune",
       "keywords": ["artistic", "sentimental", "dependent"]
+    },
+    {
+      "id": 13,
+      "sign": "Aries",
+      "month": ["March", "April"],
+      "date": [
+          {   "start": "1520",
+            "end": "1531"
+          }
+        ],
+      "longitude_start": "0",
+      "longitude_end": "30",
+      "svg_symbol": "https://en.wikipedia.org/wiki/File:Aries.svg",
+      "unicode_symbol": "♈",
+      "gloss": "The Ram",
+      "element": "Fire",
+      "ruling_body_classic": "Mars",
+      "ruling_body_modern": "Mars",
+  
+      "keywords": ["driven", "idealistic", "aggressive"]
     }
   ]
   
