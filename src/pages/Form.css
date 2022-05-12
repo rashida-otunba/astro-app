@@ -19,3 +19,13 @@ label{
 
 
 }
+h5{
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+
+label{
+    font-family: "Archivo";
+}
