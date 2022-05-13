@@ -7,30 +7,21 @@ import NavBar from "./NavBar";
 
 export default function FormSubmission({ addForm }) {
   const { state } = useLocation();
-  // console.log("state", state);
-  // console.log(state);
 
   let submitValue = Number(state.month) + Number(state.date); //321 = 300+21
-  console.log(state)
+  console.log(state);
   console.log(submitValue);
 
   const zodiacSign = zodiacs.filter((x) => {
     //create a function to convert string to numbers that can be incremented through the date range and once numbers appear then you can
     let startDate = parseInt(+x.date[0].start);
-    // console.log(startDate);
     let endDate = parseInt(+x.date[0].end);
-    // console.log(endDate);
 
-    if (startDate  >=submitValue   || endDate  >= submitValue) {
+    if (startDate >= submitValue || endDate >= submitValue) {
       //if this is true it will return one item
-      // console.log(x);
       return x;
     }
-
-    // return console.log(x);
   })[0];
-  // console.log(zodiacSign);
-  // console.log(zodiacSign.sign);
 
   return (
     <>
@@ -63,7 +54,7 @@ export default function FormSubmission({ addForm }) {
           <div style={{ color: "#fff" }}>
             <p>
               {" "}
-              your sign is: <br /> <b> {zodiacSign.sign}</b>
+              {state.name} your sign is: <br /> <b> {zodiacSign.sign}</b>
             </p>
             {/* <p>your sign is<b> {zodiacSign.sign}</b></p> */}
             <p>
